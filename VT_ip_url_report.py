@@ -19,14 +19,22 @@ def ip_report():
    response = requests.get(url, params=params)
    print(response.json())
 
+def url_scan():
+   url2=input("Input a url to scan. Include http://")
+   url = 'https://www.virustotal.com/vtapi/v2/url/scan'
+   params = {'apikey': apikey, 'url':url2}
+   response = requests.post(url, data=params)
+   print(response.json())
 
 print('Welcome to the VT url scan script.')
-choice=input("Do you want a url report[1] or ip report[2]?")
+choice=input("Do you want a url report[1], ip report[2], or to scan a new url? ")
 
 if choice=='1':
     url_report()
 elif choice=='2':
     ip_report()
+elif choice=='3':
+    url_scan()
 else:
     print("You must enter the digits 1 or 2 to make a choice.")
     print("Run the script again with correct input to use.")
