@@ -3,7 +3,7 @@
 import random
 import string
 
-print("Welcome to Charlie's password generator.")
+print("Welcome to Coralline's password generator.")
 print("\n")
 Length=input("How long should your password be? Please enter a value 10-20 : ")
 Capital=input("Should it have capital letters? Y/N ")
